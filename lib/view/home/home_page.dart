@@ -17,42 +17,32 @@ class HomePage extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(children: [
-              Row(
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: CustomTextField(
-                      hintText: "Class",
-                      isDropdown: true,
-                      dropDownItems: controller.classList
-                          .map((e) => DropdownMenuItem<String>(
-                                value: e,
-                                child: Text(e),
-                              ))
-                          .toList(),
-                      onchange: (p0) {
-                        controller.selectedClass.text = p0!;
-                      },
-                    ),
-                  ),
-                  SizedBox(width: 10.w),
-                  Expanded(
-                    flex: 4,
-                    child: CustomTextField(
-                      hintText: "Subject",
-                      isDropdown: true,
-                      dropDownItems: controller.subjectList
-                          .map((e) => DropdownMenuItem<String>(
-                                value: e,
-                                child: Text(e),
-                              ))
-                          .toList(),
-                      onchange: (p0) {
-                        controller.selectedSubject.text = p0!;
-                      },
-                    ),
-                  )
-                ],
+              CustomTextField(
+                hintText: "Class",
+                isDropdown: true,
+                dropDownItems: controller.classList
+                    .map((e) => DropdownMenuItem<String>(
+                          value: e,
+                          child: Text(e),
+                        ))
+                    .toList(),
+                onchange: (p0) {
+                  controller.selectedClass.text = p0!;
+                },
+              ),
+              SizedBox(height: 10.w),
+              CustomTextField(
+                hintText: "Subject",
+                isDropdown: true,
+                dropDownItems: controller.subjectList
+                    .map((e) => DropdownMenuItem<String>(
+                          value: e,
+                          child: Text(e),
+                        ))
+                    .toList(),
+                onchange: (p0) {
+                  controller.selectedSubject.text = p0!;
+                },
               ),
               SizedBox(height: 10.h),
               Text(

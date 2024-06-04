@@ -24,6 +24,7 @@ class CustomTextField extends StatelessWidget {
   final double? maxheight;
   final Function(String?)? onchange;
   final TextInputType? keyboardType;
+  final double? fieldWidth;
   const CustomTextField({
     super.key,
     this.txtController,
@@ -45,6 +46,7 @@ class CustomTextField extends StatelessWidget {
     this.maxheight,
     this.onchange,
     this.keyboardType,
+    this.fieldWidth,
   });
 
   @override
@@ -64,7 +66,7 @@ class CustomTextField extends StatelessWidget {
         ),
         Container(
           height: height ?? 40.h,
-          width: Get.width,
+          width: fieldWidth ?? Get.width,
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: AppColors.greyColor2.withOpacity(0.2),
@@ -73,21 +75,11 @@ class CustomTextField extends StatelessWidget {
           child: isDropdown!
               ? DropdownButtonFormField2<String>(
                   value: txtController?.text,
-
                   items: dropDownItems,
                   onChanged: onchange,
-                  // (value) {
-                  //   print(value);
-                  //   if (txtController != null) {
-                  //     txtController!.text = value!;
-                  //   }
-                  // },
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(
-                      bottom: 5.h,
-                      left: 12.w,
-                      right: 12.w,
-                    ),
+                    contentPadding:
+                        EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
                     prefixIcon: prefixIcon == null ? null : Icon(prefixIcon),
                     suffixIcon: suffixWidget,
                     hintText: hintText,
@@ -110,13 +102,8 @@ class CustomTextField extends StatelessWidget {
                   enabled: isEnable ?? true,
                   keyboardType: keyboardType ?? TextInputType.text,
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(
-                      // vertical: 15.w,
-                      // horizontal: 12.h,
-                      left: 12.w,
-                      right: 12.w,
-                      bottom: 5.h,
-                    ),
+                    contentPadding:
+                        EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
                     prefixIcon: prefixIcon == null ? null : Icon(prefixIcon),
                     suffixIcon: suffixWidget,
                     hintText: hintText,
