@@ -83,14 +83,15 @@ class CustomTextField extends StatelessWidget {
                   //   }
                   // },
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 8.w,
-                      horizontal: 12.h,
+                    contentPadding: EdgeInsets.only(
+                      bottom: 5.h,
+                      left: 12.w,
+                      right: 12.w,
                     ),
                     prefixIcon: prefixIcon == null ? null : Icon(prefixIcon),
                     suffixIcon: suffixWidget,
                     hintText: hintText,
-                    labelStyle: Theme.of(context).textTheme.bodyLarge,
+                    hintStyle: Theme.of(context).textTheme.bodyLarge,
                     border: InputBorder.none,
                     focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(

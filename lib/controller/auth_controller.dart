@@ -9,10 +9,5 @@ class AuthController extends GetxController {
   var confirmPasswordController = TextEditingController();
   var pwdObsecured = false.obs;
   var confirmPwdObsecured = false.obs;
-  // var aboutController = TextEditingController();
-  // var salaryController = TextEditingController();
-  // var dobController = TextEditingController();
-  // var selectedGender = "".obs;
-  // var listOfSkills = <int>[].obs;
-  // var listOfSocialMedia = <String>[].obs;
+  var ischecked = false.obs;
 }

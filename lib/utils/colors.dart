@@ -9,10 +9,9 @@ class AppColors {
   static const Color greyColor = Color(0xffF9F9F9);
   static const Color greyColor2 = Color(0xff8692A6);
   static const Color greyColor3 = Color(0xff696F79);
-  //facebook color #1877F2
-  static const Color facebookColor = Color(0xff1877F2);
-  //twitter color #1DA1F2
-  static const Color twitterColor = Color(0xff1DA1F2);
-  //linkedin color ##2867B2
-  static const Color linkedinColor = Color(0xff2867B2);
+  static const Color blueColor = Color(0xff2D9CDB);
+  static const Color blueColor2 = Color(0xff56CCF2);
+  static const Color purpleColor = Color(0xff9B51E0);
+  static const Color purpleColor2 = Color(0xffBB6BD9);
+  static const Color purpleColor3 = Color(0xff8A4BD8);
 }

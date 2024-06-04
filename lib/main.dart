@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mulytic_challange/utils/colors.dart';
 import 'package:mulytic_challange/utils/routes/app_routes.dart';
-import 'controller/auth_controller.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +23,6 @@ class MyApp extends StatelessWidget {
           fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         initialRoute: AppRoutes.initialRoute,
-        initialBinding: BindingsBuilder(() {
-          Get.put(AuthController());
-        }),
         getPages: AppRoutes.pages,
       ),
     );
